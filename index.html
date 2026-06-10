@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Woltermann Kaßen – Steuerberatung in Essen (Oldenburg)</title>
+<meta name="description" content="Woltermann Kaßen PartG mbB Steuerberatungsgesellschaft – individuelle, persönliche Steuerberatung, Finanzbuchhaltung, Lohnabrechnung und betriebswirtschaftliche Beratung in Essen (Oldenburg).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g fill="%23CCA876"><rect x="16" y="30" width="9" height="24" rx="1.5"/><rect x="27.5" y="19" width="9" height="35" rx="1.5"/><rect x="39" y="8" width="9" height="46" rx="1.5"/></g></svg>'>
+<style>
+  :root{
+    --ink:        #0F2B31;   /* deep petrol – north sea ink */
+    --ink-soft:   #3C5A60;
+    --paper:      #F7F4ED;   /* warm paper */
+    --paper-deep: #EFEAE0;
+    --sea:        #1E6E5C;   /* sea green accent */
+    --sea-soft:   #DDEAE3;
+    --gold:       #CCA876;   /* brand gold – sampled from the official logo */
+    --gold-deep:  #A9854F;   /* darker gold for small text/icons on light bg */
+    --line:       rgba(15,43,49,.12);
+    --radius:     22px;
+    --font-display:"Fraunces", Georgia, serif;
+    --font-body:  "Instrument Sans", -apple-system, "Segoe UI", sans-serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--font-body);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* subtle paper grain */
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;z-index:9999;
+    opacity:.35;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.035'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection{background:var(--sea);color:#fff}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+  h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.08;letter-spacing:-.01em}
+
+  a{color:inherit;text-decoration:none}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--sea);
+  }
+  .eyebrow::before{content:"";width:28px;height:1.5px;background:var(--sea);display:inline-block}
+
+  /* ---------- header ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:background .35s ease, box-shadow .35s ease, backdrop-filter .35s ease;
+  }
+  header.scrolled{
+    background:rgba(247,244,237,.82);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    box-shadow:0 1px 0 var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 28px;max-width:1280px;margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand-mark{
+    width:48px;height:48px;flex:none;
+    color:var(--gold);
+  }
+  .brand-text{line-height:1.25}
+  .brand-text strong{display:block;font-family:var(--font-display);font-size:18px;font-weight:600}
+  .brand-text strong em{font-style:italic;font-size:11.5px;font-weight:500;color:var(--gold-deep);margin-left:4px}
+  .brand-text span{font-size:9.5px;color:var(--ink-soft);letter-spacing:.175em;text-transform:uppercase}
+
+  .nav-links{display:flex;align-items:center;gap:34px;list-style:none}
+  .nav-links a{font-size:15px;font-weight:500;position:relative;padding:4px 0;color:var(--ink)}
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;
+    background:var(--sea);transition:width .25s ease;
+  }
+  .nav-links a:hover::after{width:100%}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:13px 26px;border-radius:999px;
+    font-size:15px;font-weight:600;font-family:var(--font-body);
+    border:1.5px solid var(--ink);
+    cursor:pointer;transition:all .25s ease;white-space:nowrap;
+  }
+  .btn-solid{background:var(--ink);color:var(--paper)}
+  .btn-solid:hover{background:var(--sea);border-color:var(--sea);transform:translateY(-2px);box-shadow:0 12px 28px rgba(15,43,49,.18)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+  .btn svg{transition:transform .25s ease}
+  .btn:hover svg{transform:translateX(3px)}
+
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;z-index:110}
+  .menu-toggle span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.3s}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    padding:170px 0 90px;
+    overflow:hidden;
+  }
+  .hero-glow{
+    position:absolute;pointer-events:none;border-radius:50%;filter:blur(90px);
+  }
+  .hero-glow.one{width:560px;height:560px;top:-180px;right:-120px;background:radial-gradient(circle, rgba(30,110,92,.18), transparent 65%)}
+  .hero-glow.two{width:420px;height:420px;bottom:-160px;left:-140px;background:radial-gradient(circle, rgba(204,168,118,.20), transparent 65%)}
+
+  .hero-grid{
+    display:grid;grid-template-columns:1.25fr .9fr;gap:64px;align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(44px, 6.2vw, 78px);
+    margin:22px 0 26px;
+  }
+  .hero h1 em{
+    font-style:italic;font-weight:400;color:var(--sea);
+  }
+  .hero p.lede{
+    font-size:19px;color:var(--ink-soft);max-width:520px;margin-bottom:38px;
+  }
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:44px}
+
+  .hero-chips{display:flex;gap:10px;flex-wrap:wrap}
+  .chip{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13.5px;font-weight:500;color:var(--ink-soft);
+    background:#fff;border:1px solid var(--line);
+    padding:8px 16px;border-radius:999px;
+  }
+  .chip svg{flex:none}
+
+  /* hero card stack */
+  .hero-panel{position:relative}
+  .hero-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px;box-shadow:0 24px 60px -28px rgba(15,43,49,.25);
+  }
+  .hero-card.main{position:relative;z-index:2}
+  .hero-card h3{font-size:21px;margin-bottom:18px}
+  .hours-row{
+    display:flex;justify-content:space-between;gap:16px;
+    padding:11px 0;border-bottom:1px dashed var(--line);font-size:15px;
+  }
+  .hours-row:last-of-type{border-bottom:none}
+  .hours-row span:first-child{color:var(--ink-soft)}
+  .hours-row span:last-child{font-weight:600;font-variant-numeric:tabular-nums}
+  .hero-card .note{
+    margin-top:14px;font-size:13.5px;color:var(--sea);font-weight:500;
+    display:flex;align-items:center;gap:8px;
+  }
+  .hero-float{
+    position:absolute;z-index:3;
+    background:var(--ink);color:var(--paper);
+    border-radius:18px;padding:18px 22px;
+    box-shadow:0 18px 40px -16px rgba(15,43,49,.45);
+    display:flex;align-items:center;gap:14px;
+    top:-26px;right:-28px;
+  }
+  .hero-float .num{font-family:var(--font-display);font-size:30px;font-weight:600;line-height:1}
+  .hero-float .lbl{font-size:12.5px;opacity:.75;line-height:1.35;max-width:130px}
+
+  /* ---------- marquee ---------- */
+  .marquee{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:18px 0;overflow:hidden;background:var(--paper-deep);
+    margin-top:70px;
+  }
+  .marquee-track{
+    display:flex;gap:0;width:max-content;
+    animation:scroll 38s linear infinite;
+  }
+  .marquee-track span{
+    font-family:var(--font-display);font-size:17px;font-weight:500;
+    color:var(--ink-soft);display:flex;align-items:center;white-space:nowrap;
+  }
+  .marquee-track span::after{
+    content:"✦";margin:0 28px;color:var(--gold);font-size:12px;
+  }
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- sections ---------- */
+  section{padding:110px 0}
+  .section-head{max-width:640px;margin-bottom:64px}
+  .section-head h2{font-size:clamp(34px,4.2vw,52px);margin:18px 0 18px}
+  .section-head p{color:var(--ink-soft);font-size:18px}
+
+  /* ---------- services bento ---------- */
+  .bento{
+    display:grid;grid-template-columns:repeat(12,1fr);gap:20px;
+  }
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:38px 34px;position:relative;overflow:hidden;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 28px 56px -28px rgba(15,43,49,.28);
+    border-color:rgba(30,110,92,.35);
+  }
+  .card.span-7{grid-column:span 7}
+  .card.span-5{grid-column:span 5}
+  .card.span-6{grid-column:span 6}
+  .card.dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .card.dark p, .card.dark li{color:rgba(247,244,237,.72)}
+  .card.green{background:var(--sea);color:#fff;border-color:var(--sea)}
+  .card.green p, .card.green li{color:rgba(255,255,255,.78)}
+
+  .card-icon{
+    width:54px;height:54px;border-radius:16px;
+    display:grid;place-items:center;margin-bottom:26px;
+    background:var(--sea-soft);color:var(--sea);
+  }
+  .card.dark .card-icon{background:rgba(247,244,237,.1);color:var(--gold)}
+  .card.green .card-icon{background:rgba(255,255,255,.14);color:#fff}
+  .card h3{font-size:25px;margin-bottom:12px}
+  .card p{color:var(--ink-soft);font-size:16px;margin-bottom:20px}
+  .card ul{list-style:none}
+  .card li{
+    font-size:15px;color:var(--ink-soft);
+    padding:7px 0 7px 26px;position:relative;
+  }
+  .card li::before{
+    content:"";position:absolute;left:0;top:14px;
+    width:14px;height:8px;
+    border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);
+    transform:rotate(-45deg) scale(.8);
+  }
+  .card-num{
+    position:absolute;top:30px;right:32px;
+    font-family:var(--font-display);font-size:15px;font-style:italic;
+    color:var(--ink-soft);opacity:.55;
+  }
+  .card.dark .card-num,.card.green .card-num{color:rgba(255,255,255,.5)}
+
+  /* ---------- about / why ---------- */
+  .about{background:var(--ink);color:var(--paper);border-radius:40px;margin:0 16px}
+  .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .about .eyebrow{color:var(--gold)}
+  .about .eyebrow::before{background:var(--gold)}
+  .about h2{font-size:clamp(32px,4vw,48px);margin:18px 0 22px}
+  .about h2 em{font-style:italic;color:var(--gold);font-weight:400}
+  .about p{color:rgba(247,244,237,.72);margin-bottom:18px}
+  .about-feats{margin-top:30px;display:grid;gap:14px}
+  .feat{display:flex;gap:14px;align-items:flex-start}
+  .feat svg{flex:none;margin-top:3px;color:var(--gold)}
+  .feat div strong{display:block;font-size:16px;margin-bottom:2px}
+  .feat div span{font-size:14.5px;color:rgba(247,244,237,.65)}
+
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .stat{
+    background:rgba(247,244,237,.06);
+    border:1px solid rgba(247,244,237,.12);
+    border-radius:var(--radius);padding:34px 30px;
+    transition:background .3s ease;
+  }
+  .stat:hover{background:rgba(247,244,237,.1)}
+  .stat .num{
+    font-family:var(--font-display);font-size:54px;font-weight:600;line-height:1;
+    color:var(--paper);
+  }
+  .stat .num sup{font-size:26px;color:var(--gold);font-weight:500}
+  .stat .lbl{font-size:14.5px;color:rgba(247,244,237,.65);margin-top:10px;line-height:1.45}
+
+  /* ---------- process ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step}
+  .step{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:38px 32px;position:relative;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .step:hover{transform:translateY(-6px);box-shadow:0 28px 56px -28px rgba(15,43,49,.25)}
+  .step::before{
+    counter-increment:step;
+    content:"0" counter(step);
+    font-family:var(--font-display);font-style:italic;font-size:48px;font-weight:500;
+    color:var(--sea);opacity:.9;display:block;margin-bottom:20px;
+  }
+  .step h3{font-size:22px;margin-bottom:10px}
+  .step p{font-size:15.5px;color:var(--ink-soft)}
+
+  /* ---------- team ---------- */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .person{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;position:relative;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .person:hover{transform:translateY(-6px);box-shadow:0 28px 56px -28px rgba(15,43,49,.28)}
+  .person-photo{aspect-ratio:1/1;overflow:hidden;background:var(--paper-deep)}
+  .person-photo img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    filter:saturate(.85);
+    transition:transform .55s ease, filter .55s ease;
+  }
+  .person:hover .person-photo img{transform:scale(1.045);filter:saturate(1)}
+  .person-info{padding:22px 24px 24px}
+  .person-info strong{
+    display:block;font-size:19px;font-family:var(--font-display);font-weight:600;
+  }
+  .person-info .role{font-size:14px;color:var(--ink-soft)}
+  .tag{
+    position:absolute;top:14px;left:14px;
+    font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--ink);background:rgba(247,244,237,.92);
+    border-radius:999px;padding:4px 12px;
+    box-shadow:0 4px 14px rgba(15,43,49,.18);
+  }
+  .person.lead{border-color:rgba(204,168,118,.55)}
+  .person-contact{
+    margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);
+    display:grid;gap:7px;
+  }
+  .person-contact a{
+    display:flex;align-items:center;gap:9px;
+    font-size:13.5px;font-weight:500;color:var(--ink-soft);
+    transition:color .2s ease;
+  }
+  .person-contact a:hover{color:var(--sea)}
+  .person-contact svg{flex:none;color:var(--gold-deep)}
+
+  /* ---------- career band ---------- */
+  .career{
+    background:var(--sea);color:#fff;border-radius:40px;margin:0 16px;
+    position:relative;overflow:hidden;
+  }
+  .career::after{
+    content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle, rgba(255,255,255,.14), transparent 65%);
+  }
+  .career .wrap{display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;position:relative;z-index:1}
+  .career-mark{
+    position:absolute;right:-40px;bottom:-70px;width:340px;height:340px;
+    color:#fff;opacity:.08;pointer-events:none;transform:rotate(-8deg);
+  }
+  .career h2{font-size:clamp(30px,3.6vw,44px);margin:14px 0 14px}
+  .career p{color:rgba(255,255,255,.78);max-width:520px}
+  .career .eyebrow{color:#fff}
+  .career .eyebrow::before{background:#fff}
+  .career .btn{border-color:#fff;background:#fff;color:var(--sea)}
+  .career .btn:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+
+  /* ---------- contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .contact-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px 34px;
+  }
+  .contact-card h3{font-size:23px;margin-bottom:24px}
+  .c-row{display:flex;gap:16px;align-items:flex-start;padding:13px 0;border-bottom:1px dashed var(--line)}
+  .c-row:last-child{border-bottom:none}
+  .c-row svg{flex:none;margin-top:3px;color:var(--sea)}
+  .c-row a:hover{color:var(--sea)}
+  .c-row .lbl{display:block;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:2px}
+  .c-row .val{font-weight:600;font-size:16px}
+
+  form .field{margin-bottom:18px}
+  form label{display:block;font-size:13.5px;font-weight:600;margin-bottom:7px;color:var(--ink-soft)}
+  form input, form textarea{
+    width:100%;padding:14px 16px;border-radius:14px;
+    border:1.5px solid var(--line);background:var(--paper);
+    font-family:var(--font-body);font-size:15.5px;color:var(--ink);
+    transition:border-color .25s ease, box-shadow .25s ease;
+  }
+  form input:focus, form textarea:focus{
+    outline:none;border-color:var(--sea);box-shadow:0 0 0 4px rgba(30,110,92,.12);
+  }
+  form textarea{resize:vertical;min-height:120px}
+  .form-hint{font-size:12.5px;color:var(--ink-soft);margin-top:12px}
+
+  /* ---------- footer ---------- */
+  footer{padding:80px 0 36px;border-top:1px solid var(--line);background:var(--paper-deep)}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;margin-bottom:64px}
+  .foot-grid h4{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:18px;font-weight:600}
+  .foot-grid ul{list-style:none}
+  .foot-grid li{margin-bottom:10px;font-size:15px}
+  .foot-grid a:hover{color:var(--sea)}
+  .foot-logo{display:block;width:248px;max-width:100%;height:auto}
+  .foot-brand p{color:var(--ink-soft);font-size:15px;max-width:320px;margin-top:16px}
+  .foot-word{
+    font-family:var(--font-display);font-weight:600;
+    font-size:clamp(40px,8vw,104px);line-height:1;letter-spacing:-.02em;
+    color:var(--ink);opacity:.08;text-align:center;margin-bottom:40px;user-select:none;
+  }
+  .foot-bottom{
+    display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+    padding-top:28px;border-top:1px solid var(--line);
+    font-size:13.5px;color:var(--ink-soft);
+  }
+  .foot-bottom .links{display:flex;gap:24px}
+
+  /* ---------- reveal animation ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.visible{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}
+  .reveal.d2{transition-delay:.16s}
+  .reveal.d3{transition-delay:.24s}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .marquee-track{animation:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1020px){
+    .hero-grid{grid-template-columns:1fr;gap:56px}
+    .hero-panel{max-width:480px}
+    .about .wrap{grid-template-columns:1fr;gap:56px}
+    .card.span-7,.card.span-5,.card.span-6{grid-column:span 12}
+    .steps{grid-template-columns:1fr}
+    .team-grid{grid-template-columns:1fr 1fr}
+    .contact-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:720px){
+    .nav-links{
+      position:fixed;inset:0;background:var(--paper);
+      flex-direction:column;justify-content:center;gap:30px;
+      transform:translateX(100%);transition:transform .35s ease;z-index:105;
+    }
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:24px;font-family:var(--font-display)}
+    .nav .btn{display:none}
+    .menu-toggle{display:block}
+    .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .menu-toggle.open span:nth-child(2){opacity:0}
+    .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .hero{padding-top:130px}
+    section{padding:80px 0}
+    .team-grid{grid-template-columns:1fr}
+    .hero-float{right:-8px}
+    .foot-grid{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:460px){
+    .brand-text span{display:none}
+    .brand-mark{width:40px;height:40px}
+  }
+</style>
+</head>
+<body>
+
+<!-- brand mark: arc + rising bars, recreated from the official logo as scalable SVG -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logomark" viewBox="0 0 64 64">
+    <circle cx="30" cy="38" r="22" fill="none" stroke="currentColor" stroke-width="2.4"
+            stroke-dasharray="118 20.2" stroke-linecap="round" transform="rotate(-30 30 38)"/>
+    <rect x="19"   y="33" width="6.5" height="17" rx="1" fill="currentColor"/>
+    <rect x="27.5" y="23" width="6.5" height="27" rx="1" fill="currentColor"/>
+    <rect x="36"   y="11" width="6.5" height="39" rx="1" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<!-- ===================== HEADER ===================== -->
+<header id="header">
+  <nav class="nav">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" aria-hidden="true"><use href="#logomark"/></svg>
+      <span class="brand-text">
+        <strong>Woltermann&nbsp;Kaßen <em>PartG mbB</em></strong>
+        <span>Steuerberatungsgesellschaft</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#kanzlei">Kanzlei</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#karriere">Karriere</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a class="btn btn-solid" href="tel:+4954349256100">
+      Termin vereinbaren
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="hero-glow one"></div>
+  <div class="hero-glow two"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow reveal">Steuerberatung · Essen (Oldenburg)</span>
+        <h1 class="reveal d1">Klare Zahlen.<br>Persönliche <em>Beratung.</em></h1>
+        <p class="lede reveal d2">
+          Individuelle Betreuung für Privatpersonen, Unternehmen und Gründer –
+          seit Jahren verlässlich vor Ort in der Langen Straße. Bei uns sprechen
+          Sie nicht mit einer Hotline, sondern mit Menschen, die Ihre Zahlen kennen.
+        </p>
+        <div class="hero-ctas reveal d3">
+          <a class="btn btn-solid" href="#kontakt">
+            Erstgespräch vereinbaren
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#leistungen">Unsere Leistungen</a>
+        </div>
+        <div class="hero-chips reveal d3">
+          <span class="chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1E6E5C" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+            Barrierefreier Zugang
+          </span>
+          <span class="chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1E6E5C" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+            Mandantenparkplätze
+          </span>
+          <span class="chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1E6E5C" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+            Feste Ansprechpartner
+          </span>
+        </div>
+      </div>
+
+      <div class="hero-panel reveal d2">
+        <div class="hero-card main">
+          <h3>Öffnungszeiten</h3>
+          <div class="hours-row"><span>Montag – Donnerstag</span><span>8:00 – 13:00</span></div>
+          <div class="hours-row"><span></span><span>14:00 – 17:00</span></div>
+          <div class="hours-row"><span>Freitag</span><span>8:00 – 13:00</span></div>
+          <div class="hours-row"><span>Samstag &amp; Sonntag</span><span>geschlossen</span></div>
+          <p class="note">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            Individuelle Termine nach Vereinbarung
+          </p>
+        </div>
+        <div class="hero-float">
+          <span class="num">10</span>
+          <span class="lbl">Expertinnen &amp; Experten für Ihre Zahlen</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Steuererklärungen</span><span>Finanzbuchhaltung</span><span>Lohn &amp; Gehalt</span><span>Existenzgründung</span><span>Jahresabschlüsse</span><span>Erbschaft &amp; Schenkung</span><span>Betriebswirtschaftliche Beratung</span><span>Einspruchsverfahren</span>
+      <span>Steuererklärungen</span><span>Finanzbuchhaltung</span><span>Lohn &amp; Gehalt</span><span>Existenzgründung</span><span>Jahresabschlüsse</span><span>Erbschaft &amp; Schenkung</span><span>Betriebswirtschaftliche Beratung</span><span>Einspruchsverfahren</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LEISTUNGEN ===================== -->
+<section id="leistungen">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Unsere Leistungen</span>
+      <h2>Alles rund um Ihre Steuern – aus einer Hand.</h2>
+      <p>Vier Kernbereiche, ein Anspruch: Wir nehmen Ihnen die Arbeit mit den Zahlen ab, damit Sie sich auf das Wesentliche konzentrieren können.</p>
+    </div>
+
+    <div class="bento">
+      <div class="card span-7 dark reveal">
+        <span class="card-num">(01)</span>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h6M9 11h6M9 15h3"/><rect x="5" y="3" width="14" height="18" rx="2"/></svg>
+        </div>
+        <h3>Steuerberatung</h3>
+        <p>Vom privaten Steuerbescheid bis zur komplexen Nachfolgeplanung – wir holen heraus, was Ihnen zusteht.</p>
+        <ul>
+          <li>Erstellung sämtlicher Steuererklärungen</li>
+          <li>Prüfung von Steuerbescheiden</li>
+          <li>Erbschaft- &amp; Schenkungsteuer</li>
+          <li>Einspruchs- &amp; Rechtsbehelfsverfahren</li>
+        </ul>
+      </div>
+
+      <div class="card span-5 reveal d1">
+        <span class="card-num">(02)</span>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg>
+        </div>
+        <h3>Finanzbuchhaltung</h3>
+        <p>Ihre Buchhaltung – aktuell, digital und nachvollziehbar.</p>
+        <ul>
+          <li>Einrichtung &amp; laufende Buchführung</li>
+          <li>Kostenrechnung</li>
+          <li>Anlagenbuchhaltung</li>
+        </ul>
+      </div>
+
+      <div class="card span-5 reveal">
+        <span class="card-num">(03)</span>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 11a4 4 0 10-8 0M12 3a4 4 0 014 4M5 21v-1a7 7 0 0114 0v1"/></svg>
+        </div>
+        <h3>Lohn &amp; Gehalt</h3>
+        <p>Pünktliche, korrekte Abrechnungen für Ihr Team – Monat für Monat.</p>
+        <ul>
+          <li>Laufende Lohn- &amp; Gehaltsabrechnung</li>
+          <li>An- &amp; Abmeldungen, Bescheinigungen</li>
+          <li>Lohnsteuer-Anmeldungen</li>
+        </ul>
+      </div>
+
+      <div class="card span-7 green reveal d1">
+        <span class="card-num">(04)</span>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg>
+        </div>
+        <h3>Betriebswirtschaftliche Beratung</h3>
+        <p>Von der Gründungsidee bis zur Finanzierung: Wir denken unternehmerisch mit – nicht nur steuerlich.</p>
+        <ul>
+          <li>Existenzgründungsberatung</li>
+          <li>Wahl der passenden Rechtsform</li>
+          <li>Finanzierungsberatung &amp; Planrechnungen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KANZLEI / ABOUT ===================== -->
+<section class="about" id="kanzlei">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Die Kanzlei</span>
+      <h2>Beratung, die <em>zuhört</em> – nicht nur rechnet.</h2>
+      <p>
+        Im Mittelpunkt unserer Arbeit steht die individuelle, persönliche Beratung
+        eines jeden Mandanten. Wir nehmen uns Zeit, erklären verständlich und
+        beraten transparent – ob Privatperson, Mittelständler oder Existenzgründer.
+      </p>
+      <p>
+        Für Privatpersonen optimieren wir die Steuerlast, für Unternehmerinnen und
+        Unternehmer schaffen wir Freiräume: weniger Verwaltung, mehr Zeit fürs
+        eigentliche Geschäft.
+      </p>
+      <div class="about-feats">
+        <div class="feat">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <div>
+            <strong>Transparente Beratung</strong>
+            <span>Klare Empfehlungen und nachvollziehbare Kosten – ohne Kleingedrucktes.</span>
+          </div>
+        </div>
+        <div class="feat">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <div>
+            <strong>Persönlich vor Ort</strong>
+            <span>Barrierefreier Zugang und reservierte Mandantenparkplätze direkt an der Kanzlei.</span>
+          </div>
+        </div>
+        <div class="feat">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <div>
+            <strong>Ein festes Team</strong>
+            <span>Sie haben immer dieselben Ansprechpartner – Menschen, die Ihren Fall kennen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats reveal d1">
+      <div class="stat">
+        <div class="num">2</div>
+        <div class="lbl">Partner mit voller persönlicher Verantwortung</div>
+      </div>
+      <div class="stat">
+        <div class="num">10</div>
+        <div class="lbl">Köpfe im Team – vom Steuerberater bis zur Bilanzbuchhalterin</div>
+      </div>
+      <div class="stat">
+        <div class="num">4</div>
+        <div class="lbl">Leistungsbereiche unter einem Dach</div>
+      </div>
+      <div class="stat">
+        <div class="num">100<sup>%</sup></div>
+        <div class="lbl">persönliche Betreuung – keine Warteschleifen, keine Callcenter</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROZESS ===================== -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">So arbeiten wir</span>
+      <h2>In drei Schritten zur entspannten Steuersache.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <h3>Kennenlernen</h3>
+        <p>Im persönlichen Erstgespräch klären wir Ihre Situation, Ihre Ziele und welche Unterlagen wir benötigen – verständlich und auf Augenhöhe.</p>
+      </div>
+      <div class="step reveal d1">
+        <h3>Analyse &amp; Strategie</h3>
+        <p>Wir prüfen Ihre Zahlen, identifizieren Optimierungspotenziale und entwickeln eine Strategie, die zu Ihnen passt – steuerlich wie unternehmerisch.</p>
+      </div>
+      <div class="step reveal d2">
+        <h3>Laufende Betreuung</h3>
+        <p>Fristen, Erklärungen, Abrechnungen: Wir übernehmen den laufenden Aufwand und melden uns proaktiv, wenn Handlungsbedarf besteht.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEAM ===================== -->
+<section id="team" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Unser Team</span>
+      <h2>Die Menschen hinter Ihren Zahlen.</h2>
+      <p>Zehn Kolleginnen und Kollegen, ein gemeinsamer Anspruch: Beratung, die persönlich bleibt.</p>
+    </div>
+    <div class="team-grid">
+      <div class="person lead reveal">
+        <span class="tag">Partner</span>
+        <div class="person-photo"><img src="assets/team/ludger-woltermann.jpg" alt="Ludger Woltermann, Steuerberater" loading="lazy"></div>
+        <div class="person-info">
+          <strong>Ludger Woltermann</strong>
+          <span class="role">Steuerberater</span>
+          <div class="person-contact">
+            <a href="tel:+495434925610"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>05434 / 92561-0</a>
+            <a href="mailto:lw@woka-steuerberater.de"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>lw@woka-steuerberater.de</a>
+          </div>
+        </div>
+      </div>
+      <div class="person lead reveal d1">
+        <span class="tag">Partner</span>
+        <div class="person-photo"><img src="assets/team/bernd-kassen.jpg" alt="Bernd Kaßen, Steuerberater" loading="lazy"></div>
+        <div class="person-info">
+          <strong>Bernd Kaßen</strong>
+          <span class="role">Steuerberater</span>
+          <div class="person-contact">
+            <a href="tel:+495434925610"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>05434 / 92561-0</a>
+            <a href="mailto:bk@woka-steuerberater.de"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>bk@woka-steuerberater.de</a>
+          </div>
+        </div>
+      </div>
+      <div class="person reveal d2">
+        <div class="person-photo"><img src="assets/team/juergen-kleine-arkenau.png" alt="Jürgen kleine Arkenau, Steuerfachangestellter" loading="lazy"></div>
+        <div class="person-info">
+          <strong>Jürgen kleine Arkenau</strong>
+          <span class="role">Steuerfachangestellter</span>
+          <div class="person-contact">
+            <a href="tel:+4954349256113"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>05434 / 92561-13</a>
+            <a href="mailto:ja@woka-steuerberater.de"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>ja@woka-steuerberater.de</a>
+          </div>
+        </div>
+      </div>
+      <div class="person reveal">
+        <div class="person-photo"><img src="assets/team/christa-von-hoeven.jpg" alt="Christa von Höven, Steuerfachangestellte" loading="lazy"></div>
+        <div class="person-info">
+          <strong>Christa von Höven</strong>
+          <span class="role">Steuerfachangestellte</span>
+          <div class="person-contact">
+            <a href="tel:+4954349256118"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>05434 / 92561-18</a>
+            <a href="mailto:ch@woka-steuerberater.de"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>ch@woka-steuerberater.de</a>
+          </div>
+        </div>
+      </div>
+      <div class="person reveal d1">
+        <div class="person-photo"><img src="assets/team/cornelia-kolker.jpg" alt="Cornelia Kolker, Bilanzbuchhalterin" loading="lazy"></div>
+        <div class="person-info">
+          <strong>Cornelia Kolker</strong>
+          <span class="role">Bilanzbuchhalterin</span>
+          <div class="person-contact">
+            <a href="tel:+4954349256112"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>05434 / 92561-12</a>
+            <a href="mailto:ck@woka-steuerberater.de"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>ck@woka-steuerberater.de</a>
+          </div>
+        </div>
+      </div>
+      <div class="person reveal d2">
+        <div class="person-photo"><img src="assets/team/walentina-herr.png" alt="Walentina Herr, Steuerfachangestellte" loading="lazy"></div>
+        <div class="person-info">
+          <strong>Walentina Herr</strong>
+          <span class="role">Steuerfachangestellte</span>
+          <div class="person-contact">
+            <a href="tel:+495434925610"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>05434 / 92561-0</a>
+            <a href="mailto:wh@woka-steuerberater.de"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>wh@woka-steuerberater.de</a>
+          </div>
+        </div>
+      </div>
+      <div class="person reveal">
+        <div class="person-photo"><img src="assets/team/hannelore-woltermann.jpg" alt="Hannelore Woltermann, Büroorganisation" loading="lazy"></div>
+        <div class="person-info">
+          <strong>Hannelore Woltermann</strong>
+          <span class="role">Büroorganisation</span>
+          <div class="person-contact">
+            <a href="tel:+495434925610"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>05434 / 92561-0</a>
+            <a href="mailto:info@woka-steuerberater.de"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>info@woka-steuerberater.de</a>
+          </div>
+        </div>
+      </div>
+      <div class="person reveal d1">
+        <div class="person-photo"><img src="assets/team/karina-vyssotskiy.jpg" alt="Karina Vyssotskiy, Steuerfachangestellte" loading="lazy"></div>
+        <div class="person-info">
+          <strong>Karina Vyssotskiy</strong>
+          <span class="role">Steuerfachangestellte</span>
+          <div class="person-contact">
+            <a href="tel:+4954349256111"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>05434 / 92561-11</a>
+            <a href="mailto:kv@woka-steuerberater.de"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>kv@woka-steuerberater.de</a>
+          </div>
+        </div>
+      </div>
+      <div class="person reveal d2">
+        <div class="person-photo"><img src="assets/team/hiltrud-kassen.jpg" alt="Hiltrud Kaßen, Büroangestellte" loading="lazy"></div>
+        <div class="person-info">
+          <strong>Hiltrud Kaßen</strong>
+          <span class="role">Büroangestellte</span>
+          <div class="person-contact">
+            <a href="tel:+4954349256115"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>05434 / 92561-15</a>
+            <a href="mailto:hk@woka-steuerberater.de"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>hk@woka-steuerberater.de</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KARRIERE ===================== -->
+<section class="career" id="karriere">
+  <svg class="career-mark" aria-hidden="true"><use href="#logomark"/></svg>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Karriere</span>
+      <h2>Zahlenmensch gesucht.</h2>
+      <p>
+        Sie suchen eine Kanzlei mit kurzen Wegen, echtem Teamgeist und Mandanten,
+        die man beim Namen kennt? Dann sollten wir uns kennenlernen – ob als
+        Steuerfachangestellte:r, Auszubildende:r oder Quereinsteiger:in.
+      </p>
+    </div>
+    <a class="btn reveal d1" href="mailto:info@woka-steuerberater.de?subject=Bewerbung">
+      Jetzt bewerben
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ===================== KONTAKT ===================== -->
+<section id="kontakt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Kontakt</span>
+      <h2>Lernen wir uns kennen.</h2>
+      <p>Rufen Sie an, schreiben Sie uns oder kommen Sie direkt vorbei – wir freuen uns auf Sie.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <h3>So erreichen Sie uns</h3>
+        <div class="c-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.1-7-11a7 7 0 0114 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div>
+            <span class="lbl">Adresse</span>
+            <span class="val">Lange Straße 31 · 49632 Essen (Oldenburg)</span>
+          </div>
+        </div>
+        <div class="c-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>
+          <div>
+            <span class="lbl">Telefon</span>
+            <span class="val"><a href="tel:+4954349256100">05434 / 92561-0</a></span>
+          </div>
+        </div>
+        <div class="c-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <div>
+            <span class="lbl">E-Mail</span>
+            <span class="val"><a href="mailto:info@woka-steuerberater.de">info@woka-steuerberater.de</a></span>
+          </div>
+        </div>
+        <div class="c-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6M6 14H4a2 2 0 01-2-2v-1a2 2 0 012-2h16a2 2 0 012 2v1a2 2 0 01-2 2h-2M6 14h12v7H6z"/></svg>
+          <div>
+            <span class="lbl">Fax</span>
+            <span class="val">05434 / 92561-29</span>
+          </div>
+        </div>
+        <div class="c-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <div>
+            <span class="lbl">Öffnungszeiten</span>
+            <span class="val">Mo–Do 8–13 &amp; 14–17 Uhr · Fr 8–13 Uhr</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card reveal d1">
+        <h3>Nachricht senden</h3>
+        <!-- Hinweis: Formular benötigt ein Backend (z. B. PHP-Mailer oder Formspree),
+             aktuell als mailto-Fallback verdrahtet. -->
+        <form action="mailto:info@woka-steuerberater.de" method="get" enctype="text/plain">
+          <div class="field">
+            <label for="name">Ihr Name</label>
+            <input type="text" id="name" name="name" placeholder="Max Mustermann" required>
+          </div>
+          <div class="field">
+            <label for="email">Ihre E-Mail</label>
+            <input type="email" id="email" name="email" placeholder="max@beispiel.de" required>
+          </div>
+          <div class="field">
+            <label for="msg">Ihr Anliegen</label>
+            <textarea id="msg" name="body" placeholder="Worum geht es bei Ihnen?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid" style="width:100%;justify-content:center">
+            Nachricht senden
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form-hint">Mit dem Absenden öffnet sich Ihr E-Mail-Programm. Ihre Daten werden vertraulich behandelt.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top">
+          <img class="foot-logo" src="assets/logo.png" alt="Woltermann Kaßen PartG mbB Steuerberatungsgesellschaft" width="248" height="99">
+        </a>
+        <p>Individuelle, persönliche Beratung eines jeden Mandanten – seit Jahren verlässlich in Essen (Oldenburg).</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#kanzlei">Kanzlei</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#karriere">Karriere</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>Lange Straße 31</li>
+          <li>49632 Essen (Oldenburg)</li>
+          <li><a href="tel:+4954349256100">05434 / 92561-0</a></li>
+          <li><a href="mailto:info@woka-steuerberater.de">info@woka-steuerberater.de</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-word" aria-hidden="true">Woltermann&nbsp;Kaßen</div>
+    <div class="foot-bottom">
+      <span>© 2026 Woltermann Kaßen PartG mbB Steuerberatungsgesellschaft</span>
+      <span class="links">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // header scroll state
+  const header = document.getElementById('header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // mobile menu
+  const toggle = document.getElementById('menuToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.classList.remove('open');
+    document.body.style.overflow = '';
+  }));
+
+  // scroll reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
