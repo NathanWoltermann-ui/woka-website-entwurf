@@ -219,6 +219,8 @@ em { font-style: italic; }
   position: relative;
   min-height: 100svh;
   display: flex; flex-direction: column; justify-content: flex-end;
+  /* reserve space so content never slides under the fixed nav on small screens */
+  padding-top: clamp(90px, 14vh, 130px);
   color: var(--cream);
   overflow: hidden;
 }
@@ -485,6 +487,17 @@ em { font-style: italic; }
   padding: 0.3rem 0.7rem;
   border-radius: 100px;
 }
+.card__inquire a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--brass);
+  border-bottom: 1px solid rgba(176, 138, 79, 0.4);
+  padding-bottom: 2px;
+  transition: color 0.3s, border-color 0.3s;
+}
+.card__inquire a:hover { color: var(--pine); border-color: var(--pine); }
 .card--cta {
   background: var(--pine);
   color: var(--cream);
@@ -645,6 +658,29 @@ em { font-style: italic; }
 }
 .about__creds span { font-size: 0.82rem; color: rgba(20, 32, 26, 0.65); }
 .about__actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+/* ============ Affiliations ============ */
+.affiliations {
+  background: var(--paper);
+  padding: clamp(3rem, 7vh, 5rem) var(--pad);
+  text-align: center;
+  border-top: 1px solid rgba(20, 32, 26, 0.08);
+}
+.affiliations .section-kicker { margin-bottom: 2rem; }
+.affiliations__row {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+.affiliations__row img {
+  height: 72px; width: auto;
+  background: var(--white);
+  border: 1px solid rgba(20, 32, 26, 0.08);
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-shadow: 0 10px 24px -16px rgba(20, 32, 26, 0.3);
+  transition: transform 0.35s var(--ease-out);
+}
+.affiliations__row img:hover { transform: translateY(-4px); }
 
 /* ============ Reviews ============ */
 .reviews {
@@ -878,13 +914,14 @@ em { font-style: italic; }
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(245, 240, 230, 0.1);
 }
-.footer__brand {
-  display: flex; align-items: center; gap: 0.7rem;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  color: var(--cream);
+.footer__brand { display: block; }
+.footer__brand img {
+  height: 96px; width: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.35s var(--ease-out);
 }
-.footer__brand svg { width: 34px; color: var(--brass); }
+.footer__brand:hover img { transform: translateY(-3px); }
 .footer__links { display: flex; flex-wrap: wrap; gap: 1.4rem; }
 .footer__links a {
   font-size: 0.78rem;
