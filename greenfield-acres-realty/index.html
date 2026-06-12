@@ -23,16 +23,10 @@
     </div>
   </div>
 
-  <!-- ===== Grain overlay ===== -->
-  <div class="grain" aria-hidden="true"></div>
-
   <!-- ===== Navigation ===== -->
   <header class="nav" id="nav">
     <a class="nav__brand" href="#top" aria-label="Greenfield Acres Realty — home">
-      <svg class="nav__mark" viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M2 38 L20 8 L30 24 L38 12 L50 30 L62 38" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span class="nav__name">Greenfield&nbsp;Acres<em>Realty</em></span>
+      <img class="nav__logo" src="assets/logo.jpg" alt="Greenfield Acres Realty — Where the grass is always green" />
     </a>
 
     <nav class="nav__links" aria-label="Primary">
@@ -313,6 +307,10 @@
       <div class="about__media" data-reveal-img data-parallax>
         <img loading="lazy" src="https://images.unsplash.com/photo-1486520299386-6d106b22014b?q=80&w=1600&auto=format&fit=crop" alt="Layered misty Blue Ridge mountain ridgelines" />
         <figcaption class="about__caption">The Blue Ridge Mountains — home since day one of Greenfield Acres.</figcaption>
+        <figure class="about__portrait" data-reveal>
+          <img src="assets/aimee.jpg" alt="Aimee Greenfield, Owner and Broker-in-Charge" />
+          <figcaption>Aimee Greenfield</figcaption>
+        </figure>
       </div>
       <div class="about__body">
         <p class="section-kicker" data-reveal>Owner &amp; Broker-in-Charge</p>
@@ -331,6 +329,11 @@
           <li data-reveal><strong>Millionaires Club</strong><span>Top-producing sales recognition</span></li>
           <li data-reveal><strong>Chambers of Commerce</strong><span>Alleghany &amp; Blowing Rock member</span></li>
         </ul>
+        <div class="about__seals" data-reveal>
+          <img src="assets/seal-member.jpg" alt="Institute for Luxury Home Marketing — Member" loading="lazy" />
+          <img src="assets/seal-clhms.jpg" alt="Certified Luxury Home Marketing Specialist seal" loading="lazy" />
+          <img src="assets/seal-guild.jpg" alt="CLHMS Guild seal" loading="lazy" />
+        </div>
         <div class="about__actions" data-reveal>
           <a class="btn btn--solid" href="tel:+13364667727"><span>Call Aimee — 336-466-7727</span></a>
           <a class="btn btn--ghost" href="mailto:aimeegreenfield@yahoo.com"><span>Email Aimee</span></a>
@@ -467,6 +470,10 @@
               <p><a href="mailto:greenfieldacresrealty@gmail.com">greenfieldacresrealty@gmail.com</a></p>
             </li>
           </ul>
+          <figure class="contact__office" data-reveal>
+            <img src="assets/office.jpg" alt="The Greenfield Acres Realty log-cabin office on US-21 in Sparta" loading="lazy" />
+            <figcaption>Our cabin on US-21 — come on up, the porch light’s on.</figcaption>
+          </figure>
         </div>
 
         <form class="contact__form" data-reveal action="mailto:greenfieldacresrealty@gmail.com" method="get">
@@ -515,7 +522,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© <span id="year"></span> Greenfield Acres Realty · Member, Alleghany &amp; Blowing Rock Chambers of Commerce</p>
+      <p>© <span id="year"></span> Greenfield Acres Realty · <em>“Where the grass is always green”</em> · Member, Alleghany &amp; Blowing Rock Chambers of Commerce</p>
       <p class="footer__legal">Licensed in North Carolina &amp; Virginia · Equal Housing Opportunity ⌂</p>
     </div>
   </footer>
